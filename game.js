@@ -16,7 +16,7 @@ function nextSequence() {
     
     level++
 
-    $("h1").text("level " + level)
+    $("h1").text("level " + level)  // $ means document.querySelectorAll()
 
     var randomNumber = Math.floor(Math.random() * 4)
     
@@ -31,7 +31,7 @@ function nextSequence() {
 }
 
 
-$(".btn").on("click", function() {
+$(".btn").on("click", function() {   // on.() means addEventListener()
     userChosenColor = $(this).attr("id")
     userClickedPattern.push(userChosenColor)
     playSound(userChosenColor)
@@ -77,7 +77,7 @@ function checkAnswer(currentLevel) {
         setTimeout(function(){
             $("body").removeClass("game-over")
         }, 200)
-        $("h1").text("Game Over, Press Any key to Restart")
+        $("h1").text("Game Over, Press the Start Button to Restart")
         startOver()
     }
  }
