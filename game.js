@@ -52,7 +52,7 @@ function pressAnimation(currentColor) {
      }, 100)
  }
 
- $(document).on("keypress", function () { 
+ $(".start-the-game").on("click", function () { 
     $("h1").text("level " + level)
     nextSequence()
     started = true
